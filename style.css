@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --christmastree-color : #38b038;
+    --sock-color: red;
+    --wire-color: yellow;
+    --star-color: yellow;
+    --gift-color: red;
+}
+.body{
+    position: relative;
+    background-color: #3d3d3d;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.christmastree{
+    position: relative;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.christmastree .star{
+    position: absolute;
+    top: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.christmastree .star .wing-1{
+    position: absolute;
+    top: 0;
+    border-bottom: 35px solid var(--star-color);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    rotate: 35deg;
+    z-index: 10000;
+}
+.christmastree .star .wing-2{
+    position: absolute;
+    top: 0;
+    border-bottom: 35px solid var(--star-color);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    rotate: -35deg;
+    z-index: 10000;
+}
+.christmastree .star .wing-3{
+    position: absolute;
+    top: 0;
+    border-bottom: 35px solid var(--star-color);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    rotate: 106deg;
+    z-index: 10000;
+}
+.christmastree .tree{
+    height: 100%;
+    width: 40px;
+    background-color: #3c2400;
+}
+.christmastree .leaf-1{
+    position: absolute;
+    top: -50px;
+    border-bottom: 500px solid var(--christmastree-color);
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+}
+.christmastree .leaf-2{
+    position: absolute;
+    top: -50px;
+    border-bottom: 400px solid var(--christmastree-color);
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+}
+.christmastree .leaf-3{
+    position: absolute;
+    top: -50px;
+    border-bottom: 300px solid var(--christmastree-color);
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+}
+.christmastree .leaf-4{
+    position: absolute;
+    top: -50px;
+    border-bottom: 200px solid var(--christmastree-color);
+    border-left: 105px solid transparent;
+    border-right: 105px solid transparent;
+}
+.christmastree .wire-1{
+    position: absolute;
+    top: 35px;
+    left: 140px;
+    height: 190px;
+    width: 5px;
+    border-radius: 50px;
+    background-color: var(--wire-color);
+    rotate: 65deg;
+}
+.christmastree .wire-2{
+    position: absolute;
+    top: 139px;
+    left: 140px;
+    height: 270px;
+    width: 5px;
+    border-radius: 50px;
+    background-color: var(--wire-color);
+    rotate: 70deg;
+}
+.christmastree .wire-3{
+    position: absolute;
+    top: 220px;
+    left: 143px;
+    height: 300px;
+    width: 5px;
+    border-radius: 50px;
+    background-color: var(--wire-color);
+    rotate: 70deg;
+}
+.decorate-ball{
+    position: absolute;
+    top: var(--position);
+    height: 20px;
+    width: 20px;
+    background-color: var(--color);
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 6px var(--color);
+}
+.decorate-sock{
+    position: absolute;
+    top: var(--position);
+    height: 40px;
+    width: 50px;
+    border-radius: 10px;
+    rotate: 20deg;
+}
+.decorate-sock::before{
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 20px;
+    background-color: var(--sock-color);
+    border-radius: 10px 10px 5px 5px;
+    right: 0;
+}
+.decorate-sock::after{
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 40px;
+    background-color: var(--sock-color);
+    border-radius: 5px 5px 5px 5px;
+    bottom: 0;
+    border-left: 10px solid white;
+}
+.gift{
+    position: absolute;
+    right: 500px;
+    height: 100px;
+    width: 100px;
+    background-color: var(--gift-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gift::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    translate: -50% 0%;
+    rotate: 90deg;
+    background-color: white;
+    width: 20px;
+    height: 100%;
+}
+.gift::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    translate: -50% 0%;
+    background-color: white;
+    width: 20px;
+    height: 100%;
+}
+.gift .gift-cover{
+    position: absolute;
+    top: -2px;
+    height: 20px;
+    width: 110px;
+    background-color: var(--gift-color);
+    z-index: 100000;
+}
